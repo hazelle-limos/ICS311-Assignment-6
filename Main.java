@@ -46,6 +46,7 @@ public class Main {
         System.out.println("\n=== Word Cloud: Coffee posts from Hawaii ===");
         Map<String, Integer> wordCloud1 = WordCloudGenerator.generateWordCloud(posts, include1, exclude1, filters1);
         printWordCloud(wordCloud1);
+        WordCloudWindow.showWordCloud(wordCloud1, "Coffee posts from Hawaii");
 
         // Example 2: Filter by gender and keyword
         Set<String> include2 = new HashSet<>(Arrays.asList("programming"));
@@ -56,6 +57,7 @@ public class Main {
         System.out.println("\n=== Word Cloud: Programming posts by females ===");
         Map<String, Integer> wordCloud2 = WordCloudGenerator.generateWordCloud(posts, include2, exclude2, filters2);
         printWordCloud(wordCloud2);
+        WordCloudWindow.showWordCloud(wordCloud2, "Programming posts by females");
 
         // Example 3: Filter by age
         Set<String> include3 = new HashSet<>();
@@ -66,6 +68,7 @@ public class Main {
         System.out.println("\n=== Word Cloud: Posts by users aged 40 ===");
         Map<String, Integer> wordCloud3 = WordCloudGenerator.generateWordCloud(posts, include3, exclude3, filters3);
         printWordCloud(wordCloud3);
+        WordCloudWindow.showWordCloud(wordCloud3, "Posts by users aged 40");
     }
 
     // Helper to print word cloud results
